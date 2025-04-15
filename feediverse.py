@@ -132,7 +132,7 @@ def get_entry(entry):
     return {
         'url': url,
         'link': entry.link,
-        'links': entry.links,
+        'links': getattr(entry, 'links', [])
         'comments': comments,
         'title': cleanup(entry.title),
         'summary': cleanup(summary),
